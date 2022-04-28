@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flee the field</string>
+    <string name="get_bonus">БОНУС</string>
+    <string name="start">СТАРТ</string>
+    <string name="levels">УРОВНИ</string>
+    <string name="settings">НАСТРОЙКИ</string>
+    <string name="sound">ЗВУКИ</string>
+    <string name="vibration">ВИБРАЦИЯ</string>
+    <string name="language">ЯЗЫК</string>
+    <string name="you_received">ВЫ\nПОЛУЧИЛИ!</string>
+    <string name="move_with_swipes">Двигайся с помощью свайпов</string>
+    <string name="you_are_catched">ВЫ ПОЙМАНЫ!</string>
+    <string name="main_menu">ГЛАВНОЕ МЕНЮ</string>
+    <string name="replay">ПЕРЕИГРАТЬ</string>
+    <string name="next_level">ПЕРЕЙТИ ДАЛЕЕ</string>
+    <string name="win">ПОБЕДА!</string>
+    <string name="score">СЧЁТ</string>
+</resources>

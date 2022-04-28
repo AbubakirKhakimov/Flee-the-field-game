@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Flee the field</string>
+    <string name="get_bonus">GET BONUS</string>
+    <string name="start">START</string>
+    <string name="levels">LEVELS</string>
+    <string name="settings">SETTINGS</string>
+    <string name="sound">SOUND</string>
+    <string name="vibration">VIBRATION</string>
+    <string name="language">LANGUAGE</string>
+    <string name="you_received">YOU\nRECEIVED!</string>
+    <string name="move_with_swipes">move with swipes</string>
+    <string name="you_are_catched">YOU ARE\nCATCHED!</string>
+    <string name="main_menu">main menu</string>
+    <string name="replay">replay</string>
+    <string name="next_level">next level</string>
+    <string name="win">win!</string>
+    <string name="score">SCORE</string>
+</resources>
