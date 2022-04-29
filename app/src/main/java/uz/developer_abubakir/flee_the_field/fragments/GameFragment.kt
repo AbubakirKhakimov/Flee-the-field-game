@@ -36,6 +36,7 @@ class GameFragment : Fragment() {
     val vibrator: Vibrator by lazy {
         requireActivity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
     }
+    var replay = false
 
     var level = 1
     var score = 0
@@ -52,7 +53,10 @@ class GameFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         requireActivity().window?.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.red)
-        GamePublicDatas.playMusicByRaw(requireActivity(), R.raw.menu)
+
+        if (!replay) {
+            GamePublicDatas.playMusicByRaw(requireActivity(), R.raw.menu)
+        }
     }
 
     override fun onCreateView(
@@ -212,6 +216,12 @@ class GameFragment : Fragment() {
 
     private fun changeBotPosition(){
         gameZoneAdapter.apply {
+            if (refereePosition == playerPosition) {
+                notifyDataSetChanged()
+                showCatchedDialog()
+                return
+            }
+
             val left = refereePosition - 1
             val right = refereePosition + 1
             val top = refereePosition - 7
@@ -302,6 +312,7 @@ class GameFragment : Fragment() {
         GamePublicDatas.playMusicByRaw(requireActivity(), R.raw.clash_with_the_referee)
 
         dialogBinding.replay.setOnClickListener {
+            replay = true
             findNavController().popBackStack(R.id.gameFragment, true)
             findNavController().navigate(R.id.gameFragment, bundleOf(
                 "selectedLevel" to level
@@ -351,6 +362,7 @@ class GameFragment : Fragment() {
         }
 
         dialogBinding.replay.setOnClickListener {
+            replay = true
             findNavController().popBackStack(R.id.gameFragment, true)
             findNavController().navigate(R.id.gameFragment, bundleOf(
                 "selectedLevel" to level
